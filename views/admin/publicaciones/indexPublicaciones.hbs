@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="alert alert-secondary text-center">
+        <h1>TODAS LAS PUBLICACIONES</h1>    
+    </div>
+        
+    <table class="table table-bordered">
+        <thead class="bg-dark text-center">
+        <tr class="text-white">          
+            <th>Título</th>
+            <th>Descripción</th>
+            <th>Estado</th>
+            <th>Permitir Comentarios</th>
+            <th>Categoria</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody class="text-center">
+        {{#each posts}}
+            <tr>               
+                <td>{{title}}</td>
+                <td>{{description}}</td>
+                <td>{{status}}</td>
+                <td>{{allowComments}}</td>
+                <td>{{category.title}}</td>
+                <td class="d-flex">
+                    <a href="/admin/publicaciones/editar/{{_id}}" class="btn btn-sm btn-warning mr-2">Editar</a>
+
+                    <form action="/admin/publicaciones/borrar/{{_id}}?newMethod=DELETE" method="post">
+                        <button class="btn btn-sm btn-danger" type="submit">Borrar</button>
+                    </form>
+                    
+                    
+                </td>
+            </tr>    
+        {{/each}}
+        
+        </tbody>
+    </table>
+    
+    
+</div>

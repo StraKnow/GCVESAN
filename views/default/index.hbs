@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="row">
+
+    <!-- Blog Entries Column -->
+    <div class="col-md-8">
+<div class="text-center text-center">
+<h1 class="my-4">GESTOR DE CONTENIDOS VIRTUALES ESAN</h1>
+</div>
+
+
+{{#each posts}}
+
+<div class="card mb-4">
+                <img class="card-img-top" src="{{file}}" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">{{title}}</h2>
+                    <p class="card-text">{{description}}</p>
+                    <a href="/postUnico/{{_id}}" class="btn botonShiny">Leer más&rarr;</a>
+                </div>
+                <div class="card-footer text-muted">
+                    Publicado {{creationDate}} by
+                    <a href="#">Administrador</a>
+                </div>
+            </div> 
+
+{{/each}}
+
+
+</div>
+
+
+<div class="col-md-4">
+
+    
+        <div class="card my-4">
+            <h5 class="card-header">Buscar</h5>
+            <div class="card-body">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Buscar...">
+                    <span class="input-group-btn">
+                  <button class="btn btn-primary" type="button">Ir!</button>
+                </span>
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="card my-4">
+            <h5 class="card-header">Categorias</h5>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-unstyled mb-0">
+                            {{#each categories}}
+                                <li>
+                                    <a href="#">{{title}}</a>
+                                </li>
+                                <hr>
+                            {{/each}}
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="card my-4">
+            <h5 class="card-header">Widget</h5>
+            <div class="card-body">
+                En esta sesion se pondra un carousel
+            </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+

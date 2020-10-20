@@ -1,0 +1,35 @@
+
+    
+        {{#if errors}}
+            {{#each errors}}
+                <div class="alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                    <strong>{{message}}</strong>
+                </div>
+            {{/each}}
+        {{/if}}
+
+<section>
+            <div class="container">
+                <div class="user signinBx">
+                    <div class="imgBx"><img src="/imagenes/registro.jpg"></div>
+                    <div class="formBx">
+                        <form action="/registro" method="post">
+                            <h2>Crear una cuenta</h2>
+                            <input name="firstName" class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Ingrese el nombre"
+                                       value="{{firstName}}">
+                            <input name="lastName" class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="Ingrese el apellido"
+                                       value="{{lastName}}">
+                            <input name="email" class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Ingrese el correo" value="{{email}}">
+                            <input name="password" class="form-control" id="exampleInputPassword1" type="password" placeholder="Ingrese la contraseña"  >
+                            <input name="passwordConfirm" class="form-control" id="exampleConfirmPassword" type="password" placeholder="Confirme la contraseña" >
+                            <button type="submit" class="btn btn-block botonShiny">Registrar</button>
+                            <p>¿Ya tienes una cuenta? <a href="/login">Ingresa</a></p>
+                        </form>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+        
+
+        
